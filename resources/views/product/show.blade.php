@@ -18,8 +18,10 @@
              {{ $viewData["product"]["name"] }} (${{ $viewData["product"]["price"] }})
           </h5> 
         @endif
-        <p class="card-text">{{ $viewData["product"]["description"] }}</p> 
         <p class="card-text"><strong>Price:</strong> ${{ $viewData["product"]["price"] }}</p>
+        @foreach($viewData["product"]->comments as $comment) 
+          - {{ $comment->getDescription() }}<br /> 
+        @endforeach 
       </div> 
     </div> 
   </div> 

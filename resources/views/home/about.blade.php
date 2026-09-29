@@ -1,0 +1,16 @@
+@extends('layouts.app')
+@section('title', __('About us - Online Store'))
+@section('subtitle', __('About us'))
+@section('content')
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4 ms-auto">
+            <p class="lead">{{ $viewData['description'] }}</p>
+        </div>
+        <div class="col-lg-4 me-auto">
+            <p class="lead">{{ $viewData['author'] }}</p>
+        </div>
+    </div>
+</div>
+@endsection
+

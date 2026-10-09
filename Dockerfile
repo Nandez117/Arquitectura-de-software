@@ -26,8 +26,9 @@ RUN composer install \
     && chmod -R ug+rwx storage bootstrap/cache
 
 RUN php artisan key:generate --force \
-    && php artisan migrate --force
+    
 
 EXPOSE 80
 
 CMD ["apache2-foreground"]
+

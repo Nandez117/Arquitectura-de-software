@@ -25,7 +25,7 @@ RUN composer install \
     && chown -R www-data:www-data storage bootstrap/cache \
     && chmod -R ug+rwx storage bootstrap/cache
 
-RUN php artisan key:generate --force \
+RUN php artisan key:generate --force
     
 
 EXPOSE 80
